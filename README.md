@@ -31,9 +31,12 @@ Firstly, install the npm package:
 #### iOS
 
  - Link RNTwitterSignIn.xcodeproj by running `react-native link react-native-twitter-signin`
- - Download TwitterKit 3.0 from here https://ton.twimg.com/syndication/twitterkit/ios/3.0.3-update/TwitterKitManual.zip
- - Add TwitterKit, TwitterCore and 2 other bundle files into your root folder in Xcode
- - In `Build Phases → Link Binary with libraries` add `Twitter.framework` and `LibRBTwitterSignin.a`
+ - To add Twitter Kit to your app, simply add the TwitterKit pod to your Podfile:
+   target 'MyApp' do
+     use_frameworks!
+     pod 'TwitterKit'
+   end
+ - In `Build Phases → Link Binary with libraries` add `Twitter.framework
  - Configure Info.Plist like below, replace `<consumerKey>` with your own key:
 
 ```
@@ -53,8 +56,12 @@ Firstly, install the npm package:
     <string>twitterauth</string>
 </array>
 ```
-  - Modify AppDelegate.m to `#import <TwitterKit/TwitterKit.h>` and handle openUrl
+  - Modify AppDelegate.m to `#import <TwitterKit/TWTRKit.h>` and handle openUrl
 ````
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{
+    [[Twitter sharedInstance] startWithConsumerKey:@"hTpkPVU4pThkM0" consumerSecret:@"ovEqziMzLpUOF163Qg2mj"];
+}
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
   return [[Twitter sharedInstance] application:app openURL:url options:options];
 }
