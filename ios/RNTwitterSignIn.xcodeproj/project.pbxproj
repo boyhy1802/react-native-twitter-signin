@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F920D552101073200F5E6F6 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F920D542101073200F5E6F6 /* Twitter.framework */; };
 		D00310F51F09F83000448DF6 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00310F11F09F83000448DF6 /* TwitterKit.framework */; };
 		D00310F61F09F83000448DF6 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00310F21F09F83000448DF6 /* TwitterCore.framework */; };
 		D0EFAE3C1F07833600325F6D /* RNTwitterSignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EFAE3A1F07833600325F6D /* RNTwitterSignIn.m */; };
@@ -84,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F920D542101073200F5E6F6 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		D00310F11F09F83000448DF6 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = dependencies/TwitterKit.framework; sourceTree = "<group>"; };
 		D00310F21F09F83000448DF6 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = dependencies/TwitterCore.framework; sourceTree = "<group>"; };
 		D00310F31F09F83000448DF6 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = dependencies/TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F920D552101073200F5E6F6 /* Twitter.framework in Frameworks */,
 				D00310F51F09F83000448DF6 /* TwitterKit.framework in Frameworks */,
 				D00310F61F09F83000448DF6 /* TwitterCore.framework in Frameworks */,
 			);
@@ -107,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F920D532101073100F5E6F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F920D542101073200F5E6F6 /* Twitter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D00311051F09F8C400448DF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +144,7 @@
 				D0EFAE3A1F07833600325F6D /* RNTwitterSignIn.m */,
 				D0EFAE3B1F07833600325F6D /* RNTwitterSignIn.h */,
 				D07E57261F07806700A7160F /* Products */,
+				1F920D532101073100F5E6F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

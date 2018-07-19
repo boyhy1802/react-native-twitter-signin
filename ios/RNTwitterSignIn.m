@@ -6,7 +6,7 @@
 //  Copyright © 2016 Golden Owl. All rights reserved.
 //
 
-#import <TwitterKit/TwitterKit.h>
+#import <TwitterKit/TWTRKit.h>
 #import <React/RCTConvert.h>
 #import <React/RCTUtils.h>
 #import "RNTwitterSignIn.h"
@@ -33,8 +33,13 @@ RCT_EXPORT_METHOD(logIn: (RCTPromiseResolveBlock)resolve
             reject(@"Error", @"Twitter signin error", error);
         } else {
             TWTRAPIClient *client = [TWTRAPIClient clientWithCurrentUser];
+           
+//            NSURLRequest *request = [client URLRequestWithMethod:@"GET"
+//                                                             URL:@"https://api.twitter.com/1.1/account/verify_credentials.json"
+//                                                      parameters:@{@"include_email": @"true", @"skip_status": @"true"}
+//                                                           error:nil];
             NSURLRequest *request = [client URLRequestWithMethod:@"GET"
-                                                             URL:@"https://api.twitter.com/1.1/account/verify_credentials.json"
+                                                       URLString:@"https://api.twitter.com/1.1/account/verify_credentials.json"
                                                       parameters:@{@"include_email": @"true", @"skip_status": @"true"}
                                                            error:nil];
             [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
