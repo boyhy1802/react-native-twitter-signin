@@ -32,6 +32,7 @@ Firstly, install the npm package:
 
  - Link RNTwitterSignIn.xcodeproj by running `react-native link react-native-twitter-signin`
  - To add Twitter Kit to your app, simply add the TwitterKit pod to your Podfile:
+ 
    target 'MyApp' do
      use_frameworks!
      pod 'TwitterKit'
