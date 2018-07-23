@@ -34,11 +34,8 @@ Firstly, install the npm package:
  - To add Twitter Kit to your app, simply add the TwitterKit pod to your Podfile:
  
    target 'MyApp' do
-   
      use_frameworks!
-     
      pod 'TwitterKit'
-     
    end
  - In `Build Phases → Link Binary with libraries` add `Twitter.framework
  - Configure Info.Plist like below, replace `<consumerKey>` with your own key:
